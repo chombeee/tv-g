@@ -1,8 +1,8 @@
 {
     "packageName":  "com.faris.glasstv",
-    "versionCode":  20,
-    "versionName":  "2.8.3",
-    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/chombb-v20/chombb-v20.apk",
-    "sha256":  "c88e6458ba58235c092c7c512112dde4775702e50dcb43f6a425b32ff0181ac2",
-    "notes":  "Fix OTA download using app internal storage and direct HTTPS"
+    "versionCode":  21,
+    "versionName":  "2.8.4",
+    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/chombb-v21/chombb-v21.apk",
+    "sha256":  "2768601876c7f886988c9f99ab3b0be5d2f6c543eac77158cbe8e637467915cb",
+    "notes":  "OTA end-to-end test: v20 to v21; no launcher design changes"
 }
