@@ -1,8 +1,8 @@
 {
     "packageName":  "com.faris.glasstv",
-    "versionCode":  19,
-    "versionName":  "2.8.2",
-    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/chombb-v19/chombb-v19.apk",
-    "sha256":  "697e3e769e2fea4ffc25f3e7040bc1f2749eb75c9c5316fe039a932e8f4b86b0",
-    "notes":  "CHOMBB live video dock and screensaver setup"
+    "versionCode":  20,
+    "versionName":  "2.8.3",
+    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/chombb-v20/chombb-v20.apk",
+    "sha256":  "c88e6458ba58235c092c7c512112dde4775702e50dcb43f6a425b32ff0181ac2",
+    "notes":  "Fix OTA download using app internal storage and direct HTTPS"
 }
