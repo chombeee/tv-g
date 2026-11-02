@@ -1,6 +1,8 @@
 {
-  "packageName": "com.faris.glasstv",
-  "versionCode": 17,
-  "versionName": "2.8.0",
-  "notes": "Kanal CHOMBB OTA disediakan. Kemas kini seterusnya akan muncul selepas APK rasmi dengan signature yang betul diterbitkan."
+    "packageName":  "com.faris.glasstv",
+    "versionCode":  19,
+    "versionName":  "2.8.2",
+    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/chombb-v19/chombb-v19.apk",
+    "sha256":  "697e3e769e2fea4ffc25f3e7040bc1f2749eb75c9c5316fe039a932e8f4b86b0",
+    "notes":  "CHOMBB live video dock and screensaver setup"
 }
