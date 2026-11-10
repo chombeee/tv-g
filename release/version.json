@@ -1,6 +1,6 @@
 {
-    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/v2.8.7/app-debug.apk",
-    "changelog":  "Glass TV CHOMBB v2.8.7 OTA update",
-    "versionCode":  24,
-    "versionName":  "2.8.7-chombb-ota"
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v2.8.8/Glass.TV.CHOMBB.v2.8.8.apk",
+  "changelog": "Glass TV CHOMBB v2.8.8 OTA update",
+  "versionCode": 25,
+  "versionName": "2.8.8-chombb-ota"
 }
