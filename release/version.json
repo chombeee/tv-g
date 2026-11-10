@@ -1,6 +1,6 @@
 {
-    "versionCode":  23,
-    "versionName":  "2.8.6-chombb-ota",
-    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/v2.8.6/app-debug.apk",
-    "changelog":  "Glass Classic UI, Real Frosted Glass, Animated App Glow, Weather Panel dan pembetulan navigasi."
+    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/v2.8.7/app-debug.apk",
+    "changelog":  "Glass TV CHOMBB v2.8.7 OTA update",
+    "versionCode":  24,
+    "versionName":  "2.8.7-chombb-ota"
 }
