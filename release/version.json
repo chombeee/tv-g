@@ -1,6 +1,6 @@
 {
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v2.9.0/Glass.TV.CHOMBB.v2.9.0.apk",
-  "changelog": "Glass TV CHOMBB v2.9.0 — neon dock and Home app selection improvements",
-  "versionCode": 27,
-  "versionName": "2.9.0-chombb-ota"
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v2.9.11/Glass.TV.CHOMBB.v2.9.11.apk",
+  "changelog": "Glass TV CHOMBB v2.9.11 release — animated glass glow and clock Quick Settings fix",
+  "versionCode": 28,
+  "versionName": "2.9.1-chombb-ota"
 }
