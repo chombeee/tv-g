@@ -1,6 +1,6 @@
 {
-  "versionCode": 22,
-  "versionName": "2.8.5-chombb-ota",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v2.8.5/Glass-TV-CHOMBB-v2.8.5-OTA.apk",
-  "changelog": "Glass TV CHOMBB OTA v2.8.5: kemas kini sokongan OTA melalui GitHub; pilihan UI Glass Classic dan Apple Glass."
+    "versionCode":  23,
+    "versionName":  "2.8.6-chombb-ota",
+    "apkUrl":  "https://github.com/chombeee/tv-g/releases/download/v2.8.6/Glass-TV-CHOMBB-v2.8.6-OTA.apk",
+    "changelog":  "Glass Classic UI, Real Frosted Glass, Animated App Glow, Weather Panel dan pembetulan navigasi."
 }
