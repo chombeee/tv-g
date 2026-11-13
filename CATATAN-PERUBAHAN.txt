@@ -25,3 +25,10 @@ BARU:  HeroCarousel.java   pill widget berputar (Now Playing / solat / cuaca ber
 DIUBAH: MainActivity.java  Preferences > Appearance > "Home Layout" (Classic / Hero · Now Playing);
                            jam: kanan -> carousel; shelf widget lama disorok dalam mod Hero
         GlassSettingsPanel  tile "Preferences" baru
+
+v2.10.2-hero-pills  (tema Hero ikut gambar AFTER)
+BARU:  PillDock.java   satu barisan pill kaca = semua app Mi Box, scroll sisi, nama app besar atas barisan
+DIUBAH: MainActivity   Hero: jam + tarikh kiri atas, 3 butang bulat (Inputs/Wi-Fi/Preferences) kanan atas,
+                       carousel di bawahnya, grid lama + hero shelf disorok; Classic pulih semula
+        AppAdapter     tileCount/tileAt/launchAt
+        HeroCarousel   UP -> butang atas

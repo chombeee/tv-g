@@ -37,6 +37,7 @@ public class HeroCarousel extends LinearLayout {
 
     interface Host {
         void focusClock();
+        void focusTopIcons();
         void focusDock();
         void accent(int color, boolean musicActive);
     }
@@ -458,7 +459,7 @@ public class HeroCarousel extends LinearLayout {
                 host.focusDock();
                 return true;
             case KeyEvent.KEYCODE_DPAD_UP:
-                host.focusClock();
+                host.focusTopIcons();
                 return true;
             case KeyEvent.KEYCODE_DPAD_CENTER:
             case KeyEvent.KEYCODE_ENTER:
