@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.gathin.tvhome.app-mergeDebugResources-8:/values-zh-rCN/values-zh-rCN.xml",
+            "map": [
+                {
+                    "source": "/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/res/values-zh-rCN/strings.xml",
+                    "from": {
+                        "startLines": "2,15,6,7,16,17,12,3,10,11,14,9,13,5,8,19,18,4",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,607,213,258,655,705,471,96,385,426,555,339,513,173,300,788,747,135",
+                        "endColumns": "40,47,44,41,49,41,41,38,40,44,51,45,41,39,38,46,40,37",
+                        "endOffsets": "91,650,253,295,700,742,508,130,421,466,602,380,550,208,334,830,783,168"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,96,144,189,231,281,323,365,404,445,490,542,588,630,670,810,857,898",
+                        "endColumns": "40,47,44,41,49,41,41,38,40,44,51,45,41,39,38,46,40,37",
+                        "endOffsets": "91,139,184,226,276,318,360,399,440,485,537,583,625,665,704,852,893,931"
+                    }
+                },
+                {
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/res/values-zh-rCN/values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "709",
+                        "endColumns": "100",
+                        "endOffsets": "805"
+                    }
+                }
+            ]
+        }
+    ]
+}

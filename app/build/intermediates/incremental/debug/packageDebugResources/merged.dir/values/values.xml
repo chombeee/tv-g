@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dock_apps">
+        <item>org.smarttube.stable</item>
+        <item>my.com.tonton.screen</item>
+        <item>my.gov.rtm.tv</item>
+        <item>com.nuvio.app</item>
+        <item>com.stremio.one</item>
+    </string-array>
+    <string-array name="hidden_apps">
+        <item>com.mediatek.wwtv.tvcenter</item>
+        <item>com.mitv.gallery</item>
+    </string-array>
+    <integer-array name="settings_key_scancodes">
+    </integer-array>
+    <bool name="module_cards">true</bool>
+    <bool name="reduced_motion">false</bool>
+    <bool name="shamsi_date">false</bool>
+    <bool name="show_home_settings_shortcut">false</bool>
+    <bool name="show_live_tv">true</bool>
+    <bool name="show_network_pill">true</bool>
+    <integer name="columns">5</integer>
+    <integer name="rows_below_dock">0</integer>
+    <string name="app_name">Home</string>
+    <string name="cant_open">Can\'t open %1$s</string>
+    <string name="card_app_name">App: %1$s</string>
+    <string name="card_keep_hidden">Keep hidden</string>
+    <string name="card_not_saved">Couldn\'t save the choice</string>
+    <string name="card_prompt_body">%1$s can show a card on your home screen. Keeping it hidden leaves the app\'s normal tile as it is.</string>
+    <string name="card_prompt_hint">You can change this later: hold OK on Settings.</string>
+    <string name="card_prompt_identity">%1$s, key %2$s</string>
+    <string name="card_prompt_names">The card is named \'%1$s\'. The app is \'%2$s\'.</string>
+    <string name="card_prompt_relabelled">%1$s changed the name of its card since you decided. Decide again for it.</string>
+    <string name="card_prompt_resigned">%1$s was updated with a different signing key, so your earlier answer no longer applies. Decide again for its card.</string>
+    <string name="card_prompt_title">New card from %1$s</string>
+    <string name="card_show">Show card</string>
+    <string name="card_state_hidden">Hidden</string>
+    <string name="card_state_new">New</string>
+    <string name="card_state_new_key">New key</string>
+    <string name="card_state_new_label">New name</string>
+    <string name="card_state_over_limit">Shown, over the limit of 8</string>
+    <string name="card_state_shown">Shown</string>
+    <string name="choose_input">Inputs</string>
+    <string name="connected">Connected</string>
+    <string name="date_format">d MMM yyyy</string>
+    <string name="dream_name">Clock</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="home_key_description">Makes the remote\'s Home button open this launcher.</string>
+    <string name="home_key_name">Home button</string>
+    <string name="home_settings">Default home</string>
+    <string name="home_settings_help">Choose a home screen in system settings, then press Home.</string>
+    <string name="input_action" translatable="false"/>
+    <string name="input_key_service_description">Opens the input switcher when the remote\'s Input button is pressed.</string>
+    <string name="inputs">Inputs</string>
+    <string name="live_tv">Live TV</string>
+    <string name="live_tv_action" translatable="false"/>
+    <string name="live_tv_package" translatable="false">com.mediatek.wwtv.tvcenter</string>
+    <string name="module_cards">Module cards</string>
+    <string name="no_inputs">No inputs found</string>
+    <string name="no_module_cards">No module cards installed</string>
+    <string name="not_available">Not available on this TV</string>
+    <string name="not_connected">No device</string>
+    <string name="offline">Offline</string>
+    <string name="settings">Settings</string>
+    <string name="source_panel_action" translatable="false"/>
+    <string name="source_panel_service" translatable="false"/>
+    <string name="standby">Standby</string>
+    <string name="tile_app_info">App info</string>
+    <string name="tile_move">Move</string>
+    <string name="vpn">VPN</string>
+    <string name="vpn_app" translatable="false"/>
+    <string name="vpn_off">VPN off</string>
+    <string name="wifi">Wi-Fi</string>
+    <style name="Theme.TvHome" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="Theme.TvHome.Translucent" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="TopButton" parent="TopButtonBase"/>
+    <style name="TopButtonBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:paddingStart">13.5dp</item>
+        <item name="android:paddingEnd">13.5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/pill_bg</item>
+        <item name="android:textColor">@drawable/pill_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/outfit</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:drawablePadding">7dp</item>
+        <item name="android:drawableTint">@drawable/pill_text</item>
+        <item name="android:shadowColor">#99000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="TopMenuButton" parent="TopButton">
+        <item name="android:textColor">@drawable/top_text</item>
+        <item name="android:drawableTint">@drawable/top_text</item>
+    </style>
+</resources>

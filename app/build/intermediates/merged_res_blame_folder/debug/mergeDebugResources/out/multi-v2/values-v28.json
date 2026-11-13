@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.gathin.tvhome.app-mergeDebugResources-8:/values-v28/values-v28.xml",
+            "map": [
+                {
+                    "source": "/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/res/values-v28/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "131",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "262"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "186"
+                    }
+                }
+            ]
+        }
+    ]
+}

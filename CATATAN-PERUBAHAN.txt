@@ -1,0 +1,27 @@
+v2.10.0-standby  (fail baru / diubah)
+
+BARU:  StandbyView.java        screensaver: wallpaper + kad jam/solat/cuaca + kad Now Playing
+       WeatherFx.java          animasi cuaca (matahari, bulan+bintang, awan, hujan, kilat, kabus)
+       AutoLocation.java       lokasi auto dari IP TV (cuaca + zon solat ikut)
+       GlassSettingsPanel.java panel glass bila tekan jam
+       StandbyWallpaper.java   pilihan wallpaper screensaver (asing dari Home)
+       NowPlaying.java         cari sesi media aktif
+       res/drawable/ic_bluetooth.xml, ic_power.xml
+       .github/workflows/build.yml
+
+DIUBAH: MainActivity.java      klik jam -> panel baru; screensaver guna StandbyView; simpan selang wallpaper;
+                               simpan path wallpaper Home semasa; autoLocate() di onResume
+        ClockDream.java        screensaver sistem guna StandbyView juga
+        AppLocationManager.java pilih lokasi manual -> auto dimatikan
+        WeatherAirQuality.java  + currentCode()
+        PrayerTimes.java        + nextPrayer(), nameOf()
+        AndroidManifest.xml     + BLUETOOTH (maxSdk 30)
+        app/build.gradle        versionCode 30
+
+v2.10.1-hero
+BARU:  HeroCarousel.java   pill widget berputar (Now Playing / solat / cuaca beranimasi), auto pusing 9 saat,
+                           kiri/kanan putar manual, OK = play/pause bila Now Playing
+       HeroBlob.java       bentuk berwarna di penjuru kanan atas, ikut warna album art
+DIUBAH: MainActivity.java  Preferences > Appearance > "Home Layout" (Classic / Hero · Now Playing);
+                           jam: kanan -> carousel; shelf widget lama disorok dalam mod Hero
+        GlassSettingsPanel  tile "Preferences" baru

@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.gathin.tvhome.app-mergeDebugResources-8:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "map": [
+                {
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/res/values-b+sr+Latn/values-b+sr+Latn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "22",
+                        "startColumns": "4",
+                        "startOffsets": "1288",
+                        "endColumns": "100",
+                        "endOffsets": "1384"
+                    }
+                },
+                {
+                    "source": "/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/res/values-b+sr+Latn/strings.xml",
+                    "from": {
+                        "startLines": "2,15,6,7,16,17,12,24,23,20,21,22,3,10,11,14,9,13,5,8,26,25,18,19,4",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,706,235,282,770,823,538,1312,1259,952,1022,1138,106,430,478,631,375,584,186,329,1460,1413,866,902,147",
+                        "endColumns": "50,63,46,46,52,42,45,100,52,69,115,120,40,47,59,74,54,46,48,45,66,46,35,49,38",
+                        "endOffsets": "101,765,277,324,818,861,579,1408,1307,1017,1133,1254,142,473,533,701,425,626,230,370,1522,1455,897,947,181"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,106,170,217,264,317,360,406,507,560,630,746,867,908,956,1016,1091,1146,1193,1242,1389,1456,1503,1539,1589",
+                        "endColumns": "50,63,46,46,52,42,45,100,52,69,115,120,40,47,59,74,54,46,48,45,66,46,35,49,38",
+                        "endOffsets": "101,165,212,259,312,355,401,502,555,625,741,862,903,951,1011,1086,1141,1188,1237,1283,1451,1498,1534,1584,1623"
+                    }
+                }
+            ]
+        }
+    ]
+}

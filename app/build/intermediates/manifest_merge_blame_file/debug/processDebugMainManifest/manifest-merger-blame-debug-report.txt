@@ -1,0 +1,380 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.faris.glasstv"
+4    android:versionCode="31"
+5    android:versionName="2.10.1-hero" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature
+11-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:5:5-87
+12        android:name="android.software.leanback"
+12-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:5:19-59
+13        android:required="false" />
+13-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:5:60-84
+14    <uses-feature
+14-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:6:5-90
+15        android:name="android.hardware.touchscreen"
+15-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:6:19-62
+16        android:required="false" />
+16-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:6:63-87
+17    <uses-feature
+17-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:7:5-83
+18        android:name="android.hardware.wifi"
+18-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:7:19-55
+19        android:required="false" />
+19-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:7:56-80
+20    <uses-feature
+20-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:8:5-91
+21        android:name="android.hardware.location.gps"
+21-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:8:19-63
+22        android:required="false" />
+22-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:8:64-88
+23
+24    <!-- Only for the weekly pictures of places (PlaceWallpapers); "places": false keeps the launcher offline. -->
+25    <uses-permission android:name="android.permission.INTERNET" />
+25-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:11:5-67
+25-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:11:22-64
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:12:5-79
+26-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:12:22-76
+27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+27-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:13:5-76
+27-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:13:22-73
+28    <!-- Needed on Android 10 to read the Wi-Fi network name; granted over adb at install time. -->
+29    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+29-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:15:5-79
+29-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:15:22-76
+30    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+30-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:16:5-116
+30-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:16:22-77
+31    <uses-permission android:name="android.permission.WAKE_LOCK" />
+31-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:17:5-68
+31-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:17:22-65
+32    <uses-permission
+32-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:18:5-95
+33        android:name="android.permission.BLUETOOTH"
+33-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:18:22-65
+34        android:maxSdkVersion="30" />
+34-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:18:66-92
+35    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+35-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:19:5-84
+35-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:19:22-81
+36    <uses-permission android:name="android.permission.REORDER_TASKS" />
+36-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:20:5-72
+36-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:20:22-69
+37    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+37-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:21:5-114
+37-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:21:22-75
+38    <uses-permission android:name="android.permission.DUMP" />
+38-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:22:5-99
+38-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:22:22-60
+39    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+39-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:23:5-83
+39-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:23:22-80
+40
+41    <!--
+42         Android 11+ package visibility: lets the launcher list the TV apps it shows as tiles, and the
+43         apps that declare a module card (docs/specs/card.md).
+44    -->
+45    <queries>
+45-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:27:5-42:15
+46        <intent>
+46-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:28:9-31:18
+47            <action android:name="android.intent.action.MAIN" />
+47-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+47-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+48
+49            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+49-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:13-82
+49-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:23-79
+50        </intent>
+51        <intent>
+51-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:32:9-35:18
+52            <action android:name="android.intent.action.MAIN" />
+52-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+52-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+53
+54            <category android:name="android.intent.category.LAUNCHER" />
+54-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:34:13-73
+54-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:34:23-70
+55        </intent>
+56        <intent>
+56-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:36:9-39:18
+57            <action android:name="android.intent.action.MAIN" />
+57-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+57-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+58
+59            <category android:name="com.gathin.tvhome.category.DOCK_CARD" />
+59-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:38:13-77
+59-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:38:23-74
+60        </intent>
+61        <!-- China-market MIUI TV firmware: the Settings and Wi-Fi pills fall back to Xiaomi's settings app. -->
+62        <package android:name="com.xiaomi.mitv.settings" />
+62-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:41:9-60
+62-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:41:18-57
+63    </queries>
+64
+65    <application
+65-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:44:5-175:19
+66        android:allowBackup="false"
+66-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:49:9-36
+67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+67-->[androidx.core:core:1.7.0] /data/data/com.termux/files/home/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+68        android:banner="@drawable/banner"
+68-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:47:9-42
+69        android:debuggable="true"
+70        android:extractNativeLibs="false"
+71        android:icon="@mipmap/ic_launcher"
+71-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:46:9-43
+72        android:label="@string/app_name"
+72-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:45:9-41
+73        android:localeConfig="@xml/locales_config"
+73-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:50:9-51
+74        android:theme="@style/Theme.TvHome" >
+74-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:48:9-44
+75        <service
+75-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:52:9-59:19
+76            android:name="com.gathin.tvhome.ChombbMediaListener"
+76-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:52:18-53
+77            android:exported="true"
+77-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:55:13-36
+78            android:label="CHOMBB Media Widgets"
+78-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:53:13-49
+79            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+79-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:54:13-87
+80            <intent-filter>
+80-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:56:13-58:29
+81                <action android:name="android.service.notification.NotificationListenerService" />
+81-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:57:17-99
+81-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:57:25-96
+82            </intent-filter>
+83        </service>
+84
+85        <activity
+85-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:61:9-119
+86            android:name="com.gathin.tvhome.AppleGlassActivity"
+86-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:61:19-53
+87            android:exported="false"
+87-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:61:54-78
+88            android:screenOrientation="landscape" />
+88-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:61:79-116
+89        <activity
+89-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:63:9-82:20
+90            android:name="com.gathin.tvhome.MainActivity"
+90-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:64:13-41
+91            android:clearTaskOnLaunch="true"
+91-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:69:13-45
+92            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|uiMode"
+92-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:70:13-90
+93            android:excludeFromRecents="true"
+93-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:68:13-46
+94            android:exported="true"
+94-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:65:13-36
+95            android:launchMode="singleTask"
+95-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:66:13-44
+96            android:screenOrientation="landscape"
+96-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:71:13-50
+97            android:stateNotNeeded="true" >
+97-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:67:13-42
+98            <intent-filter>
+98-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:72:13-76:29
+99                <action android:name="android.intent.action.MAIN" />
+99-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+99-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+100
+101                <category android:name="android.intent.category.HOME" />
+101-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:74:17-73
+101-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:74:27-70
+102                <category android:name="android.intent.category.DEFAULT" />
+102-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:75:17-76
+102-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:75:27-73
+103            </intent-filter>
+104            <!-- Listed in the TV's own app list, so it can be opened from the stock home screen too. -->
+105            <intent-filter>
+105-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:78:13-81:29
+106                <action android:name="android.intent.action.MAIN" />
+106-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+106-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+107
+108                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+108-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:13-82
+108-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:23-79
+109            </intent-filter>
+110        </activity>
+111        <activity
+111-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:84:9-95:20
+112            android:name="com.gathin.tvhome.WeatherActivity"
+112-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:85:13-44
+113            android:excludeFromRecents="false"
+113-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:88:13-47
+114            android:exported="true"
+114-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:87:13-36
+115            android:label="Weather &amp; Air Quality"
+115-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:86:13-54
+116            android:screenOrientation="landscape"
+116-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:89:13-50
+117            android:theme="@style/Theme.TvHome" >
+117-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:90:13-48
+118            <intent-filter>
+118-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:78:13-81:29
+119                <action android:name="android.intent.action.MAIN" />
+119-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+119-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+120
+121                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+121-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:13-82
+121-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:30:23-79
+122            </intent-filter>
+123        </activity>
+124        <activity
+124-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:97:9-108:20
+125            android:name="com.gathin.tvhome.RecentAppsActivity"
+125-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:98:13-47
+126            android:excludeFromRecents="true"
+126-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:101:13-46
+127            android:exported="true"
+127-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:100:13-36
+128            android:label="Recent Apps"
+128-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:99:13-40
+129            android:launchMode="singleTop"
+129-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:104:13-43
+130            android:screenOrientation="landscape"
+130-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:102:13-50
+131            android:theme="@style/Theme.TvHome.Translucent" >
+131-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:103:13-60
+132            <intent-filter>
+132-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:105:13-107:29
+133                <action android:name="android.intent.action.MAIN" />
+133-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:13-65
+133-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:29:21-62
+134            </intent-filter>
+135        </activity>
+136        <activity
+136-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:110:9-115:62
+137            android:name="com.gathin.tvhome.HomeSettingsActivity"
+137-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:111:13-49
+138            android:excludeFromRecents="true"
+138-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:114:13-46
+139            android:exported="false"
+139-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:112:13-37
+140            android:taskAffinity=""
+140-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:113:13-36
+141            android:theme="@android:style/Theme.NoDisplay" />
+141-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:115:13-59
+142
+143        <receiver
+143-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:117:9-123:20
+144            android:name="com.gathin.tvhome.LocationBroadcastReceiver"
+144-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:118:13-54
+145            android:exported="true" >
+145-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:119:13-36
+146            <intent-filter>
+146-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:120:13-122:29
+147                <action android:name="com.gathin.tvhome.SET_LOCATION" />
+147-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:121:17-73
+147-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:121:25-70
+148            </intent-filter>
+149        </receiver>
+150        <!--
+151             Home button for remotes that send KEYCODE_ALL_APPS (Xiaomi). Opt-in: HOME_KEY_SERVICE=1
+152             build-and-install.sh; see HomeKeyService.
+153        -->
+154        <service
+154-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:126:9-137:19
+155            android:name="com.gathin.tvhome.HomeKeyService"
+155-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:127:13-43
+156            android:exported="true"
+156-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:129:13-36
+157            android:label="@string/home_key_name"
+157-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:128:13-50
+158            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+158-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:130:13-79
+159            <intent-filter>
+159-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:131:13-133:29
+160                <action android:name="android.accessibilityservice.AccessibilityService" />
+160-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:132:17-92
+160-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:132:25-89
+161            </intent-filter>
+162
+163            <meta-data
+163-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:134:13-136:60
+164                android:name="android.accessibilityservice"
+164-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:135:17-60
+165                android:resource="@xml/home_key_service" />
+165-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:136:17-57
+166        </service>
+167
+168        <!--
+169             Screensaver: pick it in Settings, or `settings put secure screensaver_components
+170             com.gathin.tvhome/.ClockDream` over adb.
+171        -->
+172        <service
+172-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:141:9-150:19
+173            android:name="com.gathin.tvhome.ClockDream"
+173-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:142:13-39
+174            android:exported="true"
+174-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:144:13-36
+175            android:label="@string/dream_name"
+175-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:143:13-47
+176            android:permission="android.permission.BIND_DREAM_SERVICE" >
+176-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:145:13-71
+177            <intent-filter>
+177-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:146:13-149:29
+178                <action android:name="android.service.dreams.DreamService" />
+178-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:147:17-78
+178-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:147:25-75
+179
+180                <category android:name="android.intent.category.DEFAULT" />
+180-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:75:17-76
+180-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:75:27-73
+181            </intent-filter>
+182        </service>
+183
+184        <!-- The remote's Input button (KEYCODE_TV) opens the input switcher; see InputKeyService. -->
+185        <service
+185-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:153:9-164:19
+186            android:name="com.gathin.tvhome.InputKeyService"
+186-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:154:13-44
+187            android:exported="false"
+187-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:155:13-37
+188            android:label="@string/app_name"
+188-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:156:13-45
+189            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+189-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:157:13-79
+190            <intent-filter>
+190-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:131:13-133:29
+191                <action android:name="android.accessibilityservice.AccessibilityService" />
+191-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:132:17-92
+191-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:132:25-89
+192            </intent-filter>
+193
+194            <meta-data
+194-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:134:13-136:60
+195                android:name="android.accessibilityservice"
+195-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:135:17-60
+196                android:resource="@xml/input_key_service" />
+196-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:136:17-57
+197        </service>
+198
+199        <provider
+200            android:name="androidx.core.content.FileProvider"
+200-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:167:13-62
+201            android:authorities="com.faris.glasstv.fileprovider"
+201-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:168:13-64
+202            android:exported="false"
+202-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:169:13-37
+203            android:grantUriPermissions="true" >
+203-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:170:13-47
+204            <meta-data
+204-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:171:13-173:54
+205                android:name="android.support.FILE_PROVIDER_PATHS"
+205-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:172:17-67
+206                android:resource="@xml/file_paths" />
+206-->/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/AndroidManifest.xml:173:17-51
+207        </provider>
+208    </application>
+209
+210</manifest>

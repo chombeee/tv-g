@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.gathin.tvhome.app-mergeDebugResources-8:/values-fr/values-fr.xml",
+            "map": [
+                {
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "822",
+                        "endColumns": "100",
+                        "endOffsets": "918"
+                    }
+                },
+                {
+                    "source": "/data/data/com.termux/files/home/GlassTV-v2.10.1/app/src/main/res/values-fr/strings.xml",
+                    "from": {
+                        "startLines": "2,15,6,7,16,17,12,3,10,11,14,9,13,5,8,19,18,4",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,699,230,279,763,814,538,100,429,478,631,372,584,182,326,908,861,143",
+                        "endColumns": "44,63,48,46,50,46,45,42,48,59,67,56,46,47,45,60,46,38",
+                        "endOffsets": "95,758,274,321,809,856,579,138,473,533,694,424,626,225,367,964,903,177"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,100,164,213,260,311,358,404,447,496,556,624,681,728,776,923,984,1031",
+                        "endColumns": "44,63,48,46,50,46,45,42,48,59,67,56,46,47,45,60,46,38",
+                        "endOffsets": "95,159,208,255,306,353,399,442,491,551,619,676,723,771,817,979,1026,1065"
+                    }
+                }
+            ]
+        }
+    ]
+}
