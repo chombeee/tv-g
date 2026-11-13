@@ -10,8 +10,8 @@ android {
         applicationId 'com.faris.glasstv'
         minSdk 26
         targetSdk 34
-        versionCode 31
-        versionName '2.10.1-hero'
+        versionCode 32
+        versionName '2.10.2-hero-pills'
     }
 
     buildTypes {

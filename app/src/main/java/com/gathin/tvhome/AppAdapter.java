@@ -391,6 +391,15 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.Holder> {
     }
 
     /** Opens the tile's activity by explicit component, with no extras: a card can name nothing else. */
+    /** For the Hero pill dock: how many tiles there are, which are plain apps, and starting one. */
+    int tileCount() { return items.size(); }
+
+    Entry tileAt(int position) { return items.get(position); }
+
+    void launchAt(int position) {
+        if (position >= 0 && position < items.size()) launch(items.get(position));
+    }
+
     private void launch(Entry e) {
         SoundEffects.playSelect();
         if (e.kind == Entry.HOME_SETTINGS) {

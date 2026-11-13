@@ -13,6 +13,10 @@ import android.content.pm.ApplicationInfo;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.widget.RelativeLayout;
+import android.widget.TextClock;
+import android.util.DisplayMetrics;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.Paint;
 import android.graphics.RadialGradient;
 import android.graphics.Rect;
@@ -379,7 +383,13 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             clockShortcut.setOnKeyListener((v, keyCode, event) -> {
                 if (event.getAction() != KeyEvent.ACTION_DOWN) return false;
                 if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-                    focusTile(lastFocused >= 0 ? lastFocused % COLUMNS : 0);
+                    if (isHeroLayout() && pillDock != null) pillDock.focusCurrent();
+                    else focusTile(lastFocused >= 0 ? lastFocused % COLUMNS : 0);
+                    return true;
+                }
+                if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && heroTopIcons != null
+                        && heroTopIcons.getVisibility() == View.VISIBLE) {
+                    heroTopIcons.getChildAt(0).requestFocus();
                     return true;
                 }
                 if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && heroCarousel != null
@@ -575,6 +585,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         }
         adapter = new AppAdapter(this, this, COLUMNS, cfg);
         grid.setAdapter(adapter);
+        applyHomeLayout();
 
         // tvOS layout: push the dock row towards the bottom of the screen, leaving room for
         // rows_below_dock grid rows under it; the rest of the grid stays below until you press Down.
@@ -945,6 +956,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         refreshChombbWidgetShelf();
         applyHomeLayout();
         if (heroCarousel != null) heroCarousel.setActive(true);
+        if (isHeroLayout() && pillDock != null) handler.postDelayed(() -> {
+            if (pillDock != null && getCurrentFocus() == null) pillDock.focusCurrent();
+        }, 400);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             registerReceiver(packageReceiver, packageFilter, Context.RECEIVER_NOT_EXPORTED);
         } else {
@@ -3196,25 +3210,59 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     private HeroCarousel heroCarousel;
     private HeroBlob heroBlob;
+    private PillDock pillDock;
+    private LinearLayout heroTopIcons;
+    private TextClock heroDate;
+    private int heroShelfVisibility = -1;
+    private boolean pillObserverSet;
 
     private boolean isHeroLayout() {
         return "hero".equals(getSharedPreferences("chombb_appearance", MODE_PRIVATE).getString("home_layout", "classic"));
     }
 
+    private View heroIcon(int drawable, String description, Runnable action) {
+        ImageView v = new ImageView(this);
+        v.setImageResource(drawable);
+        v.setColorFilter(Color.WHITE);
+        int pad = Math.round(11 * density);
+        v.setPadding(pad, pad, pad, pad);
+        v.setContentDescription(description);
+        v.setFocusable(true);
+        v.setClickable(true);
+        final GradientDrawable bg = new GradientDrawable();
+        bg.setShape(GradientDrawable.OVAL);
+        bg.setColor(0x55101820);
+        bg.setStroke(Math.round(1.5f * density), 0x44FFFFFF);
+        v.setBackground(bg);
+        v.setOnFocusChangeListener((view, f) -> {
+            bg.setColor(f ? 0xAAFFFFFF : 0x55101820);
+            bg.setStroke(Math.round((f ? 3 : 1.5f) * density), f ? 0xFFFFFFFF : 0x44FFFFFF);
+            v.setColorFilter(f ? 0xFF101820 : Color.WHITE);
+            view.animate().scaleX(f ? 1.1f : 1f).scaleY(f ? 1.1f : 1f).setDuration(120).start();
+        });
+        v.setOnClickListener(view -> action.run());
+        return v;
+    }
+
     /**
-     * "Hero" layout: a rotating widget pill (Now Playing, prayer, weather) under the clock, on a colour shape that
-     * takes the album art's colour. It replaces the old widget shelf. "Classic" puts everything back.
+     * "Hero · Now Playing" layout, after the Figma design: clock and date top-left, three round buttons top-right
+     * with a rotating widget pill under them (Now Playing / prayer / weather) on a colour shape that takes the
+     * album art's colour, and one row of glass pills for every app on the box along the bottom. "Classic"
+     * puts the old grid, clock and widget shelf back.
      */
     private void applyHomeLayout() {
         boolean hero = isHeroLayout();
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+
         if (hero && heroCarousel == null) {
             heroBlob = new HeroBlob(this);
-            int bw = Math.round(getResources().getDisplayMetrics().widthPixels * 0.50f);
-            int bh = Math.round(getResources().getDisplayMetrics().heightPixels * 0.62f);
-            root.addView(heroBlob, 0, new FrameLayout.LayoutParams(bw, bh, Gravity.TOP | Gravity.END));
+            root.addView(heroBlob, 0, new FrameLayout.LayoutParams(
+                    Math.round(dm.widthPixels * 0.50f), Math.round(dm.heightPixels * 0.62f), Gravity.TOP | Gravity.END));
+
             heroCarousel = new HeroCarousel(this, new HeroCarousel.Host() {
                 @Override public void focusClock() { View ck = findViewById(R.id.clock); if (ck != null) ck.requestFocus(); }
-                @Override public void focusDock() { focusTile(lastFocused >= 0 ? lastFocused % COLUMNS : 0); }
+                @Override public void focusTopIcons() { if (heroTopIcons != null) heroTopIcons.getChildAt(0).requestFocus(); }
+                @Override public void focusDock() { if (pillDock != null) pillDock.focusCurrent(); }
                 @Override public void accent(int color, boolean musicActive) {
                     if (heroBlob != null) heroBlob.setAccent(color, musicActive);
                 }
@@ -3223,18 +3271,127 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             lp.topMargin = Math.round(104 * density);
             lp.rightMargin = Math.round(56 * density);
             root.addView(heroCarousel, lp);
-            heroCarousel.setActive(true);
+
+            heroTopIcons = new LinearLayout(this);
+            heroTopIcons.setOrientation(LinearLayout.HORIZONTAL);
+            final int size = Math.round(46 * density), gap = Math.round(14 * density);
+            Runnable[] acts = {this::showInputs, () -> open(systemIntent(Settings.ACTION_WIFI_SETTINGS)), this::showSettingsPopup};
+            int[] icons = {R.drawable.ic_input, R.drawable.ic_wifi, R.drawable.ic_settings};
+            String[] names = {"Inputs", "Wi-Fi", "Preferences"};
+            for (int i = 0; i < 3; i++) {
+                final int idx = i;
+                View icon = heroIcon(icons[i], names[i], acts[i]);
+                icon.setOnKeyListener((v, keyCode, event) -> {
+                    if (event.getAction() != KeyEvent.ACTION_DOWN) return false;
+                    if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) { heroCarousel.requestFocus(); return true; }
+                    if (keyCode == KeyEvent.KEYCODE_DPAD_UP) return true;
+                    if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT && idx == 0) {
+                        View ck = findViewById(R.id.clock);
+                        if (ck != null) ck.requestFocus();
+                        return true;
+                    }
+                    if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && idx == 2) return true;
+                    return false;
+                });
+                LinearLayout.LayoutParams ip = new LinearLayout.LayoutParams(size, size);
+                if (i > 0) ip.leftMargin = gap;
+                heroTopIcons.addView(icon, ip);
+            }
+            FrameLayout.LayoutParams tp = new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.END);
+            tp.topMargin = Math.round(26 * density);
+            tp.rightMargin = Math.round(56 * density);
+            root.addView(heroTopIcons, tp);
+
+            heroDate = new TextClock(this);
+            String pattern = android.text.format.DateFormat.getBestDateTimePattern(java.util.Locale.getDefault(), "EEEEMMMMd");
+            heroDate.setFormat12Hour(pattern);
+            heroDate.setFormat24Hour(pattern);
+            heroDate.setTextColor(0xDDFFFFFF);
+            heroDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+            heroDate.setShadowLayer(4f, 0f, 1f, 0x80000000);
+            try { heroDate.setTypeface(getResources().getFont(R.font.outfit)); } catch (Exception ignored) { }
+            FrameLayout.LayoutParams dp = new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.START);
+            dp.topMargin = Math.round(72 * density);
+            dp.leftMargin = Math.round(68 * density);
+            root.addView(heroDate, dp);
         }
-        if (heroCarousel != null) {
-            heroCarousel.setVisibility(hero ? View.VISIBLE : View.GONE);
-            if (!hero) {
-                heroCarousel.setActive(false);
-                heroBlob.setAccent(0xFF3A86FF, false);
-            } else {
-                heroCarousel.setActive(true);
+
+        if (hero && adapter != null && pillDock == null) {
+            pillDock = new PillDock(this, adapter, new PillDock.Host() {
+                @Override public void focusTop() {
+                    if (heroCarousel != null && heroCarousel.getVisibility() == View.VISIBLE) heroCarousel.requestFocus();
+                }
+                @Override public void appInfo(int tilePosition) { adapter.openAppInfo(tilePosition); }
+            });
+            FrameLayout.LayoutParams pp = new FrameLayout.LayoutParams(-1, -2, Gravity.BOTTOM);
+            pp.bottomMargin = Math.round(dm.heightPixels * 0.07f);
+            root.addView(pillDock, pp);
+            if (!pillObserverSet) {
+                pillObserverSet = true;
+                adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+                    @Override public void onChanged() { refreshPillDock(); }
+                    @Override public void onItemRangeInserted(int a, int b) { refreshPillDock(); }
+                    @Override public void onItemRangeRemoved(int a, int b) { refreshPillDock(); }
+                    @Override public void onItemRangeChanged(int a, int b) { refreshPillDock(); }
+                });
             }
         }
+
+        View hs = findViewById(R.id.heroShelf);
+        if (hero && hs != null && heroShelfVisibility < 0) heroShelfVisibility = hs.getVisibility();
+        if (hs != null) hs.setVisibility(hero ? View.GONE : (heroShelfVisibility >= 0 ? heroShelfVisibility : hs.getVisibility()));
+        if (gridWrap != null) gridWrap.setVisibility(hero ? View.GONE : View.VISIBLE);
+        moveClockBlock(hero);
+
+        if (heroCarousel != null) {
+            int vis = hero ? View.VISIBLE : View.GONE;
+            heroCarousel.setVisibility(vis);
+            heroTopIcons.setVisibility(vis);
+            heroDate.setVisibility(vis);
+            heroCarousel.setActive(hero);
+            if (!hero) heroBlob.setAccent(0xFF3A86FF, false);
+        }
+        if (pillDock != null) {
+            pillDock.setVisibility(hero ? View.VISIBLE : View.GONE);
+            if (hero) refreshPillDock();
+        }
         if (chombbWidgetShelf != null) refreshChombbWidgetShelf();
+    }
+
+    private void refreshPillDock() {
+        if (pillDock == null) return;
+        handler.removeCallbacks(pillRefresh);
+        handler.postDelayed(pillRefresh, 150);   // a reload fires several changes at once
+    }
+
+    private final Runnable pillRefresh = new Runnable() {
+        @Override public void run() { if (pillDock != null && isHeroLayout()) pillDock.refresh(); }
+    };
+
+    /** Hero puts the clock top-left, clock first and the weather chip after it; Classic puts it back. */
+    private void moveClockBlock(boolean hero) {
+        View block = findViewById(R.id.leftBlock);
+        View weather = findViewById(R.id.weatherCompact);
+        View clock = findViewById(R.id.clock);
+        if (block == null || weather == null || clock == null) return;
+        RelativeLayout.LayoutParams rp = (RelativeLayout.LayoutParams) block.getLayoutParams();
+        LinearLayout.LayoutParams wp = (LinearLayout.LayoutParams) weather.getLayoutParams();
+        LinearLayout parent = (LinearLayout) block;
+        if (hero) {
+            rp.removeRule(RelativeLayout.ALIGN_PARENT_END);
+            rp.addRule(RelativeLayout.ALIGN_PARENT_START);
+            wp.setMarginEnd(0);
+            wp.setMarginStart(Math.round(12 * density));
+            if (parent.indexOfChild(weather) == 0) { parent.removeView(weather); parent.addView(weather, wp); }
+        } else {
+            rp.removeRule(RelativeLayout.ALIGN_PARENT_START);
+            rp.addRule(RelativeLayout.ALIGN_PARENT_END);
+            wp.setMarginStart(0);
+            wp.setMarginEnd(Math.round(12 * density));
+            if (parent.indexOfChild(weather) != 0) { parent.removeView(weather); parent.addView(weather, 0, wp); }
+        }
+        block.setLayoutParams(rp);
+        weather.setLayoutParams(wp);
     }
 
     private LinearLayout chombbWidgetShelf;
