@@ -1,0 +1,22 @@
+GlassTV CHOMBB v3.2.1 WORK IN PROGRESS - NOT READY FOR OTA
+Target Mi Box 3 Android 9; branch dev-v3.2.1; main and release v3.2 untouched.
+
+Reported issues:
+1 HOME button opens old launcher
+2 Classic wallpaper too dim
+3 Switching back to Classic sometimes crashes
+4 Preferences closes when toggling a setting; preserve scroll/focus
+5 Pill choose and reorder dock apps
+6 Pill focus clashes with Classic glass app selector
+7 Enlarge Pill tiles
+8 Pill quick settings dark theme matching Pill
+9 Material drawer too faded; brighter than main UI
+10 Material drawer app icon style must match Material dock
+11 Material dock slightly taller, app labels larger and bold
+12 Material choose and reorder dock apps independently
+13 Material D-pad UP cannot reach Settings
+14 Material: black background; blob 15% smaller, right-aligned; wallpaper inside blob upright while blob morphs
+
+Source WIP ZIP exists outside GitHub and is NOT YET merged into this branch.
+WIP ZIP reportedly implements parts of 7, 9, 11, 14 but requires code review/build/TV testing.
+Do not publish v3.2.1 release before all fixes are tested.
