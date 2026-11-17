@@ -1,6 +1,6 @@
 {
-  "versionCode": 37,
-  "versionName": "3.2.4",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.4/v3.2.4.apk",
-  "changelog": "Material: kad Semua app, drawer dan Quick Settings yang kembang."
+  "versionCode": 39,
+  "versionName": "3.2.6",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.6/v3.2.6.apk",
+  "changelog": "Lirik gaya Apple Music, widget tak bertindih dock dan ikon, Now Playing buka app muzik."
 }
