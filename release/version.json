@@ -1,6 +1,6 @@
 {
-  "versionCode": 41,
-  "versionName": "3.2.8",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.8/v3.2.8.apk",
-  "changelog": "Animasi spring gaya ColorOS 17, lirik membesar dari widget, Now Playing gaya Dynamic Island, dock Pill dinaikkan."
+  "versionCode": 42,
+  "versionName": "3.2.9",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.9/v3.2.9.apk",
+  "changelog": "Lirik buka kad besar dengan glow ikut lagu, bar progress api baru kat Now Playing."
 }
