@@ -1,6 +1,6 @@
 {
-  "versionCode": 40,
-  "versionName": "3.2.7",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/3.2.7/PRE.GTV.3.2.7.apk",
-  "changelog": "Lirik gaya Apple Music, widget tak bertindih dock dan ikon, Now Playing buka app muzik."
+  "versionCode": 41,
+  "versionName": "3.2.8",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.8/v3.2.8.apk",
+  "changelog": "Animasi spring gaya ColorOS 17, lirik membesar dari widget, Now Playing gaya Dynamic Island, dock Pill dinaikkan."
 }
