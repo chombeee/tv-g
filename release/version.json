@@ -1,6 +1,6 @@
 {
-  "versionCode": 42,
-  "versionName": "3.2.9",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.9/v3.2.9.apk",
-  "changelog": "Lirik buka kad besar dengan glow ikut lagu, bar progress api baru kat Now Playing."
+  "versionCode": 43,
+  "versionName": "3.2.10",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.10/v3.2.10.apk",
+  "changelog": "Now Playing baru: kad tanpa butang teks, butang pause bulat, masa berjalan, dan pilihan bar (Api atau Kepala bercahaya) dalam setting widget."
 }
