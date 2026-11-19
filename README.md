@@ -85,6 +85,71 @@ Tekan **Home** untuk semak hasilnya. Untuk Now Playing dan lirik, pergi ke **Pre
 adb shell cmd notification allow_listener com.faris.glasstv/com.gathin.tvhome.ChombbMediaListener
 ```
 
+### ZIP setup untuk Windows dan Termux
+
+Pasang dan buka Glass TV pada TV dahulu. Muat turun ZIP dan ekstrak **semua fail ke folder yang sama**. Skrip menyimpan rekod Home asal dan aplikasi yang dinyahaktifkan pada TV, mengikut pengguna Android. Simpan ZIP supaya arahan Undo boleh dijalankan semula. [Muat turun GlassTV-Setup.zip](https://raw.githubusercontent.com/chombeee/tv-g/main/tools/GlassTV-Setup.zip)
+
+**Windows CMD**
+
+1. Pasang Android Platform Tools. Tambah `adb.exe` ke PATH atau letakkan folder `platform-tools` di sebelah fail BAT.
+2. Hidupkan debugging pada TV. Sambungkan melalui USB atau ADB rangkaian. Jika TV meminta kebenaran, tekan **Allow**.
+3. Klik dua kali **`GlassTV-Setup.bat`**, atau jalankan dari CMD di folder ZIP yang diekstrak.
+
+```bat
+GlassTV-Setup.bat
+```
+
+Menu Windows menyediakan **Setup Auto**, **Tetapkan Home sahaja**, **Debloat Auto**, **Debloat Manual** dan **Undo**. Setup Auto menyenaraikan pakej yang dikesan sebelum meminta pengesahan. Dalam Debloat Manual, masukkan nombor aplikasi pengguna yang hendak dinyahaktifkan. Contohnya, taip `1 3` untuk memilih dua aplikasi.
+
+**Termux pada telefon Android**
+
+Dalam Termux, nyahzip fail yang dimuat turun. Telefon dan TV perlu berada pada rangkaian yang boleh berhubung.
+
+```bash
+pkg install android-tools unzip
+termux-setup-storage
+unzip ~/storage/downloads/GlassTV-Setup.zip -d ~/glasstv-setup
+cd ~/glasstv-setup
+```
+
+Untuk **Wireless debugging**, pilih **Pair device with pairing code** pada TV. Gantikan alamat contoh dengan alamat dan port yang dipaparkan pada TV. Port pairing dan port sambungan biasanya berbeza.
+
+```bash
+adb pair 192.168.1.20:37119
+adb connect 192.168.1.20:40357
+adb devices
+```
+
+Jika TV sudah bersambung, jalankan arahan di bawah. Untuk ADB rangkaian lama yang aktif pada port `5555`, kau juga boleh beri alamat terus, contohnya `bash glasstv-setup.sh 192.168.1.20:5555`.
+
+```bash
+bash glasstv-setup.sh
+```
+
+Skrip Termux terus mencuba menetapkan **Glass TV sebagai Home** dan mengesahkan hasilnya sebelum menjalankan debloat asas. Jika firmware menolak penukaran Home atau Home asal tak dapat dikenal pasti, skrip berhenti sebelum debloat. Tekan butang **Home** pada remote untuk menguji hasilnya.
+
+**Apa yang Debloat Auto ubah**
+
+Auto menyemak tiga pakej pilihan yang tepat dan hanya nyahaktifkan pakej yang dipasang serta aktif.
+
+| Pakej | Aplikasi |
+| --- | --- |
+| `com.google.android.videos` | Google TV / Google Play Movies & TV |
+| `com.google.android.play.games` | Google Play Games |
+| `com.google.android.music` | Google Play Music lama |
+
+Launcher asal, Settings, Play Store, Google Play Services dan komponen remote dikecualikan. Debloat menggunakan `disable-user` supaya aplikasi boleh dihidupkan semula.
+
+**Undo jika ada masalah**
+
+Selesai Setup Auto, pilih **Kekalkan perubahan**, **Undo debloat**, **Undo semua**, atau **Pulihkan satu app**. Undo semua mengaktifkan semula aplikasi dalam rekod dan cuba memulihkan Home asal. Jika firmware masih menolak pemulihan, pilih Home asal dalam **Default apps** pada TV jika pilihan itu tersedia.
+
+Untuk buka menu pemulihan kemudian, pilih **Undo / pulihkan app** dalam BAT Windows. Dalam Termux, jalankan arahan ini sambil masih bersambung ke TV yang sama.
+
+```bash
+bash glasstv-setup.sh --undo
+```
+
 ## Kemas kini dan bina sendiri
 
 **Pada TV**, buka **Preferences → About → Check for Updates**. Jika pemasangan kemas kini ditolak kerana tandatangan berbeza, bina APK dengan **keystore yang sama** seperti pemasangan lama untuk mengekalkan data dan tetapan.
