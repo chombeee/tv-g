@@ -1,6 +1,6 @@
 {
-  "versionCode": 46,
-  "versionName": "3.3.1",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.1/v3.3.1.apk",
-  "changelog": "D-pad dikemas kini untuk Classic, Hero, Pill dan Material. Now Playing buka app muzik. Tiga gaya lirik Api, Pop dan Neon, kad lirik besar yang lebih ringan, dan animasi spring."
+  "versionCode": 47,
+  "versionName": "3.3.3",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.3/v3.3.3.apk",
+  "changelog": "Peralihan lirik lebih lancar. Gradient blur Pill sejajar dengan wallpaper, kedudukan pill dinaikkan, dan All Apps ikut gaya Pill. Quick Settings ikut UI aktif dengan butang UI Seterusnya. Navigasi Hero dan clipping fokus dikemas kini."
 }
