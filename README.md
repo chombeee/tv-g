@@ -1,325 +1,102 @@
-# Glass TV
+# Glass TV CHOMBB
 
-**Launcher kaca (frosted glass) untuk Android TV, Google TV dan TV Box. Skrin Home yang ringan, cantik dan bebas iklan, lengkap dengan Now Playing, lirik, waktu solat, cuaca dan wallpaper dari telefon.**
+Launcher untuk **Android TV, Google TV dan TV Box** dengan empat susun atur Home, dock kaca, widget muzik dan kawalan D-pad. Tukar rupa Home terus dari Quick Settings.
 
-[![Muat turun APK](https://img.shields.io/badge/Muat_turun-APK_terkini-success?style=for-the-badge&logo=android)](https://github.com/chombeee/tv-g/releases/latest)
+**Versi OTA semasa ialah v3.3.7, kod 51.** [Muat turun APK](https://github.com/chombeee/tv-g/releases/download/v3.3.7/v3.3.7.apk) · [Nota keluaran dan ZIP sumber](https://github.com/chombeee/tv-g/releases/tag/v3.3.7)
 
-> 🚨 **Penting: jangan sideload APK mentah-mentah dan berhenti di situ.**
-> Kalau cuma pasang APK guna pendrive atau app *Downloader*, ramai TV akan anggap Glass TV sebagai app biasa. Bila tekan butang **HOME**, TV tetap balik ke skrin utama asal yang penuh iklan.
-> Lepas pasang, **jadikan Glass TV sebagai Home** guna langkah di [bahagian 2](#2-jadikan-glass-tv-sebagai-skrin-home).
+Perlu **Android 8.0 (API 26)** atau lebih baharu. Selepas memasang APK, pilih Glass TV sebagai launcher Home jika TV menawarkan pilihan itu.
 
-- **Package:** `com.faris.glasstv`
-- **Activity Home:** `com.gathin.tvhome.MainActivity`
-- **Minimum:** Android 8 (API 26) ke atas
-- **Layout:** Classic, Hero Now Playing, Pill Dock dan Material Dynamic
+## Paparan Home
 
----
+| Susun atur | Rupa dan penggunaan |
+| --- | --- |
+| **Classic** | Dock kaca dengan kad aplikasi lebar dan grid di bawahnya. |
+| **Hero** | Jam besar di tengah, grid ikon dan widget di sebelah kanan. |
+| **Pill** | Barisan aplikasi berbentuk kapsul di atas gradient blur, dengan pintasan **Apps** ke semua aplikasi. |
+| **Material** | Dock dan panel berpalet dinamik. |
 
-## Galeri Glass TV — screenshot sebenar
+Buka **Quick Settings → UI Seterusnya** untuk menukar layout mengikut turutan Classic → Hero → Pill → Material. Untuk memilih terus, buka **Preferences → Appearance → Home Layout**.
 
-Paparan di bawah diambil terus daripada aplikasi. Wallpaper, ikon aplikasi dan kandungan muzik mungkin berbeza mengikut peranti.
+| Classic | Pill |
+| :---: | :---: |
+| ![Classic dengan dock kaca dan widget di sebelah kanan](docs/screenshots/classic-home.png) | ![Pill dengan barisan aplikasi berbentuk kapsul](docs/screenshots/pill-dock-home.png) |
 
-### Home & Dock
+![Paparan Home dalam susun atur Material](docs/screenshots/material-dynamic-home.png)
 
-| Classic | Pill Dock |
-|:---:|:---:|
-| ![Classic Home dengan dock kaca, Now Playing dan lirik](docs/screenshots/classic-home.png) | ![Pill Dock Home dengan kad Now Playing dan lirik](docs/screenshots/pill-dock-home.png) |
+## Muzik, lirik dan widget
 
-**Material Dynamic** — grid aplikasi, jam besar, Now Playing dan widget lirik.
+- **Now Playing** memaparkan tajuk, artis, kulit album dan masa lagu daripada aplikasi muzik yang aktif. Pilih bar **Api** atau **Kepala bercahaya** dalam **Preferences → Widgets → Now Playing Bar**.
+- **Lirik** tersedia sebagai kad Home dan paparan besar. Pilih **Api**, **Emas**, **Neon** atau **Ombak** dalam **Preferences → Widgets → Gaya Lirik**. Api memercik seperti bar Now Playing, manakala Ombak menyapu huruf dengan percikan air. Lirik bergerak mengikut lagu apabila cap masa tersedia.
+- **Widget lain** termasuk Recent Apps, waktu solat dan kalendar. Laraskan saiz dan susunan widget dalam **Preferences → Widgets**.
 
-![Material Dynamic Home](docs/screenshots/material-dynamic-home.png)
+| Lirik pada paparan besar | Quick Settings |
+| :---: | :---: |
+| ![Paparan lirik besar dengan kulit album dan baris aktif](docs/screenshots/lyrics-fullscreen.png) | ![Quick Settings dengan kawalan peranti dan wallpaper](docs/screenshots/quick-settings.png) |
 
-> **Hero Now Playing:** layout ini tersedia dalam pemilih Home Layout, tetapi screenshot paparan Home khusus Hero belum disertakan. Tidak digantikan dengan screenshot layout lain.
+### Kawalan remote
 
-### Muzik & lirik
+| Tindakan | Hasil |
+| --- | --- |
+| **OK** pada aplikasi | Buka aplikasi. |
+| **Tahan OK** pada aplikasi | Buka menu tindakan seperti Move, App info atau Sorok, mengikut item. |
+| **Atas/Bawah** pada Home | Bergerak antara Settings, widget dan aplikasi. Dalam Hero, **Kanan** dari hujung grid masuk ke widget dan **Kiri** dari lajur widget paling kiri kembali ke grid. |
+| **OK** pada Now Playing | Buka aplikasi muzik yang sedang bermain. |
+| **Tahan OK** atau **Menu** pada Now Playing | Simpan atau Like lagu jika aplikasi muzik menawarkan tindakan itu. |
+| **OK** pada kad Lirik | Buka paparan lirik besar. Tekan **OK** untuk main/jeda, **Kiri/Kanan** untuk menukar lagu, atau **Back/Home** untuk menutup paparan. |
 
-| Now Playing Bar — Kepala bercahaya | Now Playing Bar — Api |
-|:---:|:---:|
-| ![Tetapan bar kepala bercahaya](docs/screenshots/widgets-glow.png) | ![Tetapan bar api](docs/screenshots/widgets-fire.png) |
+## Quick Settings dan Preferences
 
-**Lirik skrin penuh** — paparan album, maklumat lagu dan baris lirik.
+- **Quick Settings** menghimpunkan Wi-Fi, Bluetooth, Inputs, Turn off, Volume dan Wallpaper dalam satu panel. Pada v3.3.7, Wi-Fi/Bluetooth, Inputs/Turn off dan pilihan foto kembali berpasangan. **UI Seterusnya** berada di bawah **All settings**.
+- **Wallpaper** boleh dipilih daripada koleksi, ditukar kepada video, atau dihantar dari telefon. Buka **Preferences → Wallpaper → Upload Wallpaper via QR**, imbas kod QR pada rangkaian Wi-Fi yang sama, dan biarkan skrin QR terbuka sehingga muat naik selesai.
+- **System** menyediakan pilihan cuaca Malaysia, stesen jerebu JAS/APIMS, lokasi waktu solat JAKIM serta pintasan Wi-Fi. **About** menyediakan **Check for Updates**, tutorial kebenaran, Backup & Restore dan Crash Log.
 
-![Paparan lirik skrin penuh](docs/screenshots/lyrics-fullscreen.png)
+| Wallpaper | Appearance |
+| :---: | :---: |
+| ![Preferences Wallpaper dan pilihan muat naik melalui QR](docs/screenshots/wallpaper-preferences.png) | ![Preferences Appearance dan tetapan kaca](docs/screenshots/appearance-preferences.png) |
 
-### Preferences & kawalan
+## Pasang dan tetapkan sebagai Home
 
-| Pilihan Home Layout | Appearance |
-|:---:|:---:|
-| ![Pilihan empat Home Layout](docs/screenshots/home-layout-selector.png) | ![Tetapan Appearance dan Glass Transparency](docs/screenshots/appearance-preferences.png) |
-
-| Wallpaper | Quick Settings |
-|:---:|:---:|
-| ![Wallpaper Collection dan Upload Wallpaper via QR](docs/screenshots/wallpaper-preferences.png) | ![Quick Settings, volume dan wallpaper](docs/screenshots/quick-settings.png) |
-
-**Nota:** Semua gambar di atas menggunakan laluan relatif dalam repo. Upload folder `docs/screenshots/` bersama `README.md` supaya gambar dipaparkan di GitHub.
-
----
-
-## Apa yang anda dapat
-
-- **Empat layout Home.** Classic, Hero Now Playing, Pill Dock dan Material Dynamic. Tukar dalam *Preferences → Appearance → Home Layout*.
-- **Kaca yang bergerak lembut.** Dock, butang atas dan menu menunjukkan wallpaper di belakangnya dengan kesan kaca. Fokus meluncur dari satu item ke item lain, tidak melompat.
-- **Widget Now Playing.** Paparkan lagu yang sedang dimainkan (Spotify, YouTube Music dan lain-lain, ikut media session yang aktif) dengan art album, tajuk, artis, bar progress, masa berjalan dan jumlah masa.
-  - Tekan **OK** pada kad untuk membuka app yang sedang memainkan lagu.
-  - Tahan **OK** atau tekan **Menu** untuk Simpan / Like lagu (jika app menyokongnya).
-  - Bar progress ada dua gaya dalam *Preferences → Widgets → Now Playing Bar*: **Kepala bercahaya** (lalai) atau **Api**.
-- **Widget Lirik.** Lirik berjalan ikut masa lagu. Tekan **OK** untuk lirik skrin penuh dengan latar warna yang mengalir ikut art album. **Kiri/Kanan** tukar lagu, **OK** main/jeda, **Back** atau **Home** menutup.
-- **Waktu solat.** Jadual enam waktu dengan waktu seterusnya diserlahkan.
-- **Cuaca dan kualiti udara.** Skrin cuaca penuh dengan animasi ikut keadaan (matahari, bulan, awan, hujan, kilat, kabus). Lokasi boleh dikesan automatik dari IP TV atau dipilih sendiri.
-- **Recent Apps.** Tekan **HOME** dua kali dari mana-mana untuk melihat app yang baru dibuka.
-- **Susun app dari remote.** Tahan **OK** pada app untuk menu: Move, App info dan Sorok.
-- **Skrin StandBy / screensaver.** Jam besar, kad solat, cuaca dan Now Playing bila TV terbiar.
-- **Wallpaper dari telefon.** Imbas kod QR di TV, hantar gambar melalui Wi-Fi yang sama. Tiada app awan pihak ketiga.
-- **Kemas kini OTA.** Semak dan pasang versi baru terus pada TV tanpa PC.
-- **Pembersih cache.** Membersihkan cache app tanpa menyentuh log masuk atau data app.
-- **Warna dinamik.** Warna Material mengikut wallpaper atau art album.
-
----
-
-## 1. Pemasangan kali pertama
-
-### 1.1 Hidupkan ADB pada TV
-1. **Settings → Device Preferences → About**, tekan **Build** 7 kali sehingga Developer options dibuka.
-2. **Developer options**, hidupkan **USB debugging** (atau **Network / Wireless debugging**).
-3. Catat alamat IP TV di **Settings → Network & Internet**.
-
-### 1.2 Pilihan A — Sambung dari PC (Windows, macOS atau Linux)
-Pasang [Android platform-tools](https://developer.android.com/tools/releases/platform-tools), kemudian:
+Muat turun `v3.3.7.apk` daripada halaman release. Pasang fail pada TV dengan pengurus fail atau sambungkan PC menggunakan Android Platform Tools. Jika TV menggunakan Wireless debugging, gunakan alamat dan port yang dipaparkan oleh TV untuk pairing dan sambungan. [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools)
 
 ```bash
-adb connect 192.168.x.x:5555      # ganti dengan IP TV
-adb devices                       # mesti keluar "device" (terima prompt di TV: Always allow)
-```
-
-Google TV atau Android 11 ke atas dengan **Wireless debugging**: guna `adb pair IP:PORT_PAIR` dahulu (kod pairing dari TV), kemudian `adb connect IP:PORT`.
-
-### 1.3 Pilihan B — Sambung dari telefon Android menggunakan Termux (tanpa PC)
-
-Gunakan **Termux** pada telefon Android. Telefon dan TV perlu berada pada rangkaian Wi-Fi/LAN yang boleh berhubung. Pasang Termux daripada [F-Droid](https://f-droid.org/packages/com.termux/) atau [GitHub Termux](https://github.com/termux/termux-app/releases) dan buka aplikasi.
-
-**1. Pasang ADB dalam Termux:**
-
-```bash
-pkg update && pkg upgrade -y
-pkg install android-tools -y
-adb version
-```
-
-**2. Sambung ke TV (Android TV 9 / ADB TCP port 5555):**
-
-Pastikan ADB debugging di TV dihidupkan dan ADB melalui rangkaian tersedia. Gantikan IP contoh dengan IP TV sebenar.
-
-```bash
-adb connect 192.168.0.133:5555
 adb devices
+adb install -r v3.3.7.apk
 ```
 
-Terima permintaan **Allow USB debugging** pada TV jika muncul. Status peranti sepatutnya `device`, bukannya `unauthorized` atau `offline`. **ADB TCP port 5555 tidak semestinya diaktifkan hanya dengan menghidupkan USB debugging**; sesetengah TV memerlukan langkah pengaktifan tambahan atau tidak menyokongnya tanpa sambungan USB awal.
+Jika menggunakan telefon Android dengan Termux, jalankan `pkg install android-tools`, benarkan akses fail dengan `termux-setup-storage`, kemudian gunakan `adb install -r ~/storage/downloads/v3.3.7.apk` selepas menyambung ke TV.
 
-**Android 11 ke atas (jika TV menyediakan Wireless debugging):** buka *Developer options → Wireless debugging → Pair device with pairing code*, kemudian jalankan:
+Jika pilihan launcher Home tiada dalam Settings TV, pilih arahan ADB yang sepadan dengan versi peranti. Sokongan bergantung pada firmware.
 
-```bash
-adb pair IP_TV:PORT_PAIRING
-# masukkan kod pairing yang dipaparkan pada TV
-adb connect IP_TV:PORT_ADB
-adb devices
-```
+**Android 10 dan ke atas**
 
-Gunakan **port pairing** dan **port sambungan** yang dipaparkan TV; kedua-duanya boleh berbeza dan bukan semestinya `5555`.
-
-**3. Muat turun dan pasang APK:**
-
-Muat turun APK daripada [GitHub Releases](https://github.com/chombeee/tv-g/releases/latest) menggunakan browser telefon. Dalam Termux:
-
-```bash
-termux-setup-storage
-# Benarkan akses storan apabila diminta
-ls ~/storage/downloads/*.apk
-adb install -r ~/storage/downloads/NAMA_FAIL_APK.apk
-```
-
-Gantikan `NAMA_FAIL_APK.apk` dengan nama fail sebenar. Jika fail mempunyai ruang dalam nama, letakkan laluan dalam tanda petikan. Jika APK berada di folder lain, gunakan laluan sebenar.
-
-**4. Beri permission dan tetapkan Home:** arahan `adb shell ...` dalam bahagian **1.4** dan **2** di bawah boleh dijalankan terus dalam Termux, sama seperti pada PC. Tidak perlu menaip `adb connect` berulang kali selagi sambungan masih aktif.
-
-**Nota keselamatan:** matikan Wireless debugging/ADB rangkaian apabila selesai, khususnya pada rangkaian yang tidak dipercayai.
-
-### 1.4 Pasang APK dan beri kebenaran
-
-
-Muat turun APK dari [Releases](https://github.com/chombeee/tv-g/releases/latest), kemudian:
-
-```bash
-adb install -r GlassTV.apk
-
-# Lokasi (cuaca dan waktu solat)
-adb shell pm grant com.faris.glasstv android.permission.ACCESS_FINE_LOCATION
-adb shell pm grant com.faris.glasstv android.permission.ACCESS_COARSE_LOCATION
-
-# Benarkan launcher hidupkan akses Notification sendiri (untuk Now Playing dan Lirik)
-adb shell pm grant com.faris.glasstv android.permission.WRITE_SECURE_SETTINGS
-
-# Recent Apps
-adb shell appops set com.faris.glasstv GET_USAGE_STATS allow
-adb shell pm grant com.faris.glasstv android.permission.DUMP
-
-# Now Playing dan Lirik: akses Notification (jika TV tiada skrin Notification Access)
-adb shell cmd notification allow_listener com.faris.glasstv/com.gathin.tvhome.ChombbMediaListener
-```
-
-Sesetengah kebenaran akan ditolak pada firmware tertentu. Itu normal. Lihat [Masalah lazim](#5-masalah-lazim).
-
----
-
-## 2. Jadikan Glass TV sebagai skrin Home
-
-Pilih **satu** kaedah ikut versi Android pada TV.
-
-**Android 10 dan ke atas (disyorkan):**
 ```bash
 adb shell cmd role add-role-holder --user 0 android.app.role.HOME com.faris.glasstv
 ```
 
-**Android 9:**
+**Android TV 9**
+
 ```bash
 adb shell cmd package set-home-activity com.faris.glasstv/com.gathin.tvhome.MainActivity
 ```
 
-**Kalau TV masih buka launcher asal (firmware yang mengunci Home):**
-Nyahaktifkan launcher asal **selepas** Glass TV dipasang dan dibuka sekurang-kurangnya sekali.
+Tekan **Home** untuk semak hasilnya. Untuk Now Playing dan lirik, pergi ke **Preferences → Widgets → Notification Access** dan benarkan Glass TV. Jika TV gagal membuka skrin kebenaran itu, cuba arahan ini.
 
 ```bash
-adb shell pm list packages | grep -i -E "launcher|home"     # cari nama package launcher asal
-adb shell pm disable-user --user 0 <package-launcher-asal>
+adb shell cmd notification allow_listener com.faris.glasstv/com.gathin.tvhome.ChombbMediaListener
 ```
 
-| Platform | Package launcher asal (semak dahulu, jangan salin membuta tuli) |
-|---|---|
-| Android TV | `com.google.android.tvlauncher`, `com.google.android.leanbacklauncher` |
-| Google TV | `com.google.android.apps.tv.launcherx` |
+## Kemas kini dan bina sendiri
 
-**Cara pulih jika skrin jadi kosong:**
-```bash
-adb shell pm enable --user 0 <package-launcher-asal>
-```
+**Pada TV**, buka **Preferences → About → Check for Updates**. Jika pemasangan kemas kini ditolak kerana tandatangan berbeza, bina APK dengan **keystore yang sama** seperti pemasangan lama untuk mengekalkan data dan tetapan.
 
-**Remote yang butang HOME tak berfungsi (contoh Xiaomi):** hidupkan **HomeKeyService** di *Settings → Accessibility*, atau:
-```bash
-adb shell settings put secure enabled_accessibility_services com.faris.glasstv/com.gathin.tvhome.HomeKeyService
-adb shell settings put secure accessibility_enabled 1
-```
+**Pada Windows**, ekstrak ZIP sumber v3.3.7, pasang JDK 17 dan Android SDK Platform 34, kemudian jalankan `Build-v3.3.7.cmd`. APK keluar dalam `GlassTV-work\app\build\outputs\apk\release`. Gunakan ZIP sumber pada halaman release untuk membina versi yang sepadan dengan APK v3.3.7. [ZIP sumber v3.3.7](https://github.com/chombeee/tv-g/releases/download/v3.3.7/GlassTV-v3.3.7.zip)
 
----
+### Terbitkan OTA GitHub
 
-## 3. Debloat (buang app yang tak perlu)
+1. Naikkan `versionCode` dalam `app/build.gradle` melebihi kod release OTA semasa. Tetapkan `versionName` untuk keluaran baharu.
+2. Bina dengan keystore asal. Cipta release dan muat naik APK yang sepadan dengan tag.
+3. Selepas sahkan APK boleh dimuat turun, kemas kini `release/version.json` pada branch `main`. Nilai `versionCode` dan `versionName` mesti sepadan dengan APK. Gunakan URL aset release untuk `apkUrl`. [Manifest OTA](release/version.json)
 
-```bash
-adb shell pm list packages -3        # app pengguna
-adb shell pm list packages           # semua, termasuk sistem
-```
+## Kredit
 
-Buang untuk pengguna semasa (boleh dipulihkan, tidak memadam partition sistem):
-```bash
-adb shell pm uninstall -k --user 0 <package>
-```
-
-Pulih semula:
-```bash
-adb shell cmd package install-existing <package>
-```
-
-Atau sekadar nyahaktif:
-```bash
-adb shell pm disable-user --user 0 <package>
-adb shell pm enable --user 0 <package>
-```
-
-**Jangan buang:** `com.google.android.gms`, `com.android.vending`, `com.google.android.tv.remote.service`, setup wizard dan Settings. Buang satu demi satu dan uji TV selepas setiap pakej.
-
----
-
-## 4. Kawalan remote
-
-| Butang | Fungsi |
-|---|---|
-| OK pada app | Buka app |
-| Tahan OK pada app | Menu: Move, App info, Sorok |
-| Fokus awal | App pertama dalam dock |
-| Kanan pada hujung dock | Masuk ke widget |
-| HOME sekali | Kembali ke Home |
-| HOME dua kali | Recent Apps |
-| **Now Playing**: OK | Buka app yang sedang memainkan lagu |
-| **Now Playing**: Tahan OK atau Menu | Simpan / Like lagu |
-| **Lirik**: OK | Lirik skrin penuh |
-| **Lirik skrin penuh**: Kiri / Kanan | Lagu sebelum / seterusnya |
-| **Lirik skrin penuh**: OK | Main / jeda |
-| **Lirik skrin penuh**: Back atau Home | Tutup |
-
-### Muat naik wallpaper dari telefon
-1. *Preferences → Appearance → Upload Wallpaper via QR*.
-2. Imbas QR dengan telefon (mesti Wi-Fi yang sama).
-3. Hantar gambar. **Biarkan tetingkap QR di TV terbuka** sehingga siap, kemudian tekan **Tutup**.
-
----
-
-## 5. Masalah lazim
-
-- **Now Playing kosong:** pastikan Notification Access untuk Glass TV hidup (arahan `allow_listener` di atas).
-- **Lokasi atau waktu solat salah:** *Preferences → Lokasi Cuaca*.
-- **Skrin kosong selepas disable launcher asal:** `adb shell pm enable --user 0 <package-launcher-asal>`.
-- **Role HOME ditolak:** guna kaedah `pm disable-user` di bahagian 2.
-- **OTA gagal kata tandatangan tak sama:** APK baru mesti ditandatangan dengan kunci yang sama seperti yang sedang dipasang. Jika tidak, nyahpasang dahulu (`adb uninstall com.faris.glasstv`) kemudian pasang semula.
-
----
-
-## 6. Bina sendiri
-
-Perlu **JDK 17** dan Android SDK.
-
-**Windows (CMD):**
-```bat
-set "JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot"
-set "PATH=%JAVA_HOME%\bin;%PATH%"
-set "ANDROID_HOME=%LOCALAPPDATA%\Android\Sdk"
-set "ANDROID_SDK_ROOT=%ANDROID_HOME%"
-
-call gradlew.bat clean assembleRelease --no-daemon "-Dorg.gradle.java.home=%JAVA_HOME%"
-```
-APK siap di `app\build\outputs\apk\release\app-release.apk`.
-
-**GitHub Actions:** tab **Actions → Build APK → Run workflow**, kemudian muat turun artifact `glasstv-apk`.
-
-### Menerbitkan kemas kini OTA
-1. **Releases → Draft a new release**, tag `vX.Y.Z`, muat naik APK, tekan **Publish release**.
-2. Selepas itu, edit `release/version.json`:
-```json
-{
-  "versionCode": 42,
-  "versionName": "3.2.9",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.2.9/v3.2.9.apk",
-  "changelog": "Ringkasan perubahan."
-}
-```
-Edit `version.json` **selepas** release siap, supaya TV tidak cuba memuat turun pautan yang belum wujud. `versionCode` mesti lebih besar daripada versi yang sedang dipasang.
-
----
-
-## Perubahan dalam versi ini (3.2.9)
-
-- **Lirik skrin penuh:** blur dibuang. Launcher di belakang hanya digelapkan sedikit.
-- **Now Playing:** tiada butang Play/Pause. Klik kad terus membuka app yang sedang memainkan lagu.
-- **Now Playing Bar:** pilihan gaya **Kepala bercahaya** atau **Api** dalam tetapan widget.
-
-### Dalam pembangunan
-- Peraturan D-pad yang sama untuk keempat-empat layout (kiri/kanan kekal dalam baris, atas/bawah ke widget dan Settings).
-- Animasi spring lembut yang seragam di seluruh UI.
-- Widget Lirik yang bergerak sendiri: baris dibaca memudar, baris semasa terang dengan glow dan api, baris seterusnya gelap.
-
----
-
-## Kredit dan lesen
-
-- Berasaskan projek sumber terbuka **CleanYourTV** oleh Gathin (lesen MIT) dan **Glass TV** oleh aqmangge. Sila kekalkan notis hak cipta dan teks lesen asal dalam repo ini (fail `LICENSE`).
-- Taip muka **Outfit** di bawah SIL Open Font License (`FONT-LICENSE-OFL.txt`).
-- Pustaka warna Material di `third_party/material-color-utilities` mengikut lesen dalam folder tersebut.
-- Gambar, logo dan nama app muzik adalah milik pemilik masing-masing.
+Terima kasih kepada **Gathin** untuk projek asal **CleanYourTV** dan **aqmangge** untuk **Glass TV**. Fon **Outfit** menggunakan SIL Open Font License. Logo aplikasi, gambar dan kandungan muzik milik pemilik masing-masing. [Lesen fon](FONT-LICENSE-OFL.txt)
