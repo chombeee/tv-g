@@ -1,6 +1,6 @@
 {
-  "versionCode": 47,
-  "versionName": "3.3.3",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.3/v3.3.3.apk",
-  "changelog": "Peralihan lirik lebih lancar. Gradient blur Pill sejajar dengan wallpaper, kedudukan pill dinaikkan, dan All Apps ikut gaya Pill. Quick Settings ikut UI aktif dengan butang UI Seterusnya. Navigasi Hero dan clipping fokus dikemas kini."
+  "versionCode": 48,
+  "versionName": "3.3.4",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.4/v3.3.4.apk",
+  "changelog": "Quick Settings lebih padat tanpa scroll. Gaya Api lebih jelas pada kedua-dua saiz kad. Pop diganti dengan Emas dan Ombak, Neon kekal, dan trail cahaya menghubungkan baris lirik."
 }
