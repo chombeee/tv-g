@@ -1,6 +1,6 @@
 {
-  "versionCode": 51,
-  "versionName": "3.3.7",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.7/v3.3.7.apk",
-  "changelog": "Quick Settings kembali kepada susunan asal dengan kad berpasangan, Volume lebar penuh dan bahagian Wallpaper. Panel dipadatkan sedikit supaya semua pilihan termasuk UI Seterusnya muat tanpa scroll."
+  "versionCode": 52,
+  "versionName": "3.3.8",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.3.8/v3.3.8.apk",
+  "changelog": "Gradient pada lirik besar bertukar terus apabila lagu bertukar. Animasi pertukaran warna latar dibuang."
 }
