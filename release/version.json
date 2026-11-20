@@ -1,6 +1,6 @@
 {
-  "versionCode": 54,
-  "versionName": "3.4.0",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.4.0/v3.4.0.apk",
-  "changelog": "Cuaca dalam Bahasa Melayu pada semua layout. Back sekali kembali ke app pertama dan Back dua kali buka screensaver. Screensaver mengekalkan cuaca beranimasi, waktu solat dan lirik. Clear Recent Apps dikemas kini, Penyanyi Tersasul dibuang dan percikan Itik Ombak diperhalus."
+  "versionCode": 55,
+  "versionName": "3.4.1",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.4.1/v3.4.1.apk",
+  "changelog": "Pemasa auto-sleep GlassTV dibuang daripada Home dan screensaver. Screensaver dan butang Turn off manual masih tersedia."
 }
