@@ -1,6 +1,7 @@
 {
-  "versionCode": 55,
-  "versionName": "3.4.1",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.4.1/v3.4.1.apk",
-  "changelog": "Pemasa auto-sleep GlassTV dibuang daripada Home dan screensaver. Screensaver dan butang Turn off manual masih tersedia."
+  "versionCode": 56,
+  "versionName": "3.5.0",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.5.0/v3.5.0.apk",
+  "sha256": "TAMPAL_SHA256_DI_SINI",
+  "changelog": "Lirik lebih cantik (7 gaya, termasuk Aurora dan Sakura), animasi buka app gaya ColorOS, Kiri/Kanan tukar lagu di Now Playing, Lokasi Tepat sampai nama kampung, kad lirik lebih ringan."
 }
