@@ -44,6 +44,10 @@ Buka **Quick Settings → UI Seterusnya** untuk menukar layout mengikut turutan 
 | **Tahan OK** atau **Menu** pada Now Playing | Simpan atau Like lagu jika aplikasi muzik menawarkan tindakan itu. |
 | **OK** pada kad Lirik | Buka paparan lirik besar. Tekan **OK** untuk main/jeda, **Kiri/Kanan** untuk menukar lagu, atau **Back/Home** untuk menutup paparan. |
 
+## Installation Guide
+
+📺 [GlassTV Installation & Recovery Guide](docs/INSTALLATION.md)
+
 ## Quick Settings dan Preferences
 
 - **Quick Settings** menghimpunkan Wi-Fi, Bluetooth, Inputs, Turn off, Volume dan Wallpaper dalam satu panel. Pada v3.3.7, Wi-Fi/Bluetooth, Inputs/Turn off dan pilihan foto kembali berpasangan. **UI Seterusnya** berada di bawah **All settings**.
