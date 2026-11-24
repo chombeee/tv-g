@@ -1,7 +1,7 @@
 {
-  "versionCode": 56,
-  "versionName": "3.5.0",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.5.0/v3.5.0.apk",
-  "sha256": "17a360bbeb00070767c6756696e2bf968819a0040615025ce8baed17cee20b21",
-  "changelog": "Lirik lebih cantik (7 gaya, termasuk Aurora dan Sakura), animasi buka app gaya ColorOS, Kiri/Kanan tukar lagu di Now Playing, Lokasi Tepat sampai nama kampung, kad lirik lebih ringan."
+  "versionCode": 59,
+  "versionName": "3.5.3",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.5.3/v3.5.3.apk",
+  "sha256": "TAMPAL_SHA256",
+  "changelog": "Wallpaper potret dan gambar kecil dipapar penuh tanpa dipotong, dengan latar kabur dari gambar yang sama. Home lebih cepat dibuka dan guna kurang RAM bila TV kekurangan memori."
 }
