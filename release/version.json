@@ -1,7 +1,7 @@
 {
-  "versionCode": 59,
-  "versionName": "3.5.3",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.5.3/v3.5.3.apk",
-  "sha256": "4bbc9b2d159b81f0725a50fb8361cce9d7897137dfe73e07774e81219fe3682d",
-  "changelog": "Wallpaper potret dan gambar kecil dipapar penuh tanpa dipotong, dengan latar kabur dari gambar yang sama. Home lebih cepat dibuka dan guna kurang RAM bila TV kekurangan memori."
+  "versionCode": 60,
+  "versionName": "3.6.0",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.0/v3.6.0.apk",
+  "sha256": "881d5e3f35ff5674f1119f3fa7e9b87575776e230a4ed6ab4cb9d13b777feef7",
+  "changelog": "Lirik perkataan demi perkataan sebenar, terjemahan, romanisasi, laras masa ikut app, 6 gaya baru (Prism, Karaoke Klasik, Bold Card, Glow, Typewriter, Calm) dengan kesan Api/Emas/Neon/Ombak/Sakura, dan pratonton dalam Preferences."
 }
