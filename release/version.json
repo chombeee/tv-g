@@ -2,9 +2,8 @@
   "versionCode": 65,
   "versionName": "3.6.5",
   "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.5/v3.6.5.apk",
-  "changelog": "## GlassTV v3.6.5
-
-### 🌧️ Screensaver baru (Ambient)
+  "changelog": "## GlassTV v3.6.5### 
+  🌧️ Screensaver baru (Ambient)
 - Susunan baru gaya Ambient: gambar penuh skrin dengan zoom perlahan (Ken Burns), tiada kotak besar
 - Jam besar di kiri bawah, tarikh + tarikh Hijrah, cip waktu solat seterusnya
 - Cuaca dan 5 waktu solat di kanan bawah (solat seterusnya bertanda hijau)
