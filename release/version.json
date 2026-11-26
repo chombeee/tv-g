@@ -1,7 +1,7 @@
 {
-  "versionCode": 65,
-  "versionName": "3.6.5",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.5/v3.6.5.apk",
-  "changelog": "Screensaver Ambient baru dengan kesan cuaca 3D (hujan, kilat, angin, titis di kaca). Quick Settings gaya Control Center dengan pemasa tidur, kawalan muzik dan bersihkan RAM. Preferences baru dengan carian dan pratonton. 5 animasi Now Playing. RAM lebih rendah.",
-  "sha256": "662d3beed069a9635f418e7fcc06405a6ba902b9664a5a683da3db8f35743678"
+  "versionCode": 66,
+  "versionName": "3.6.6",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.6/v3.6.6.apk",
+  "changelog": "Pembaikan: navigasi D-pad dalam Preferences di semua tab, butang Atas dalam drawer Pill kembali ke dock, widget tidak lagi lari atau mengecil bila buka drawer atau tukar layout.",
+  "sha256": "1a9d2bb47a661cde999c3bfec07c96ef11c73741e304b8f8a83b894e34b0762f"
 }
