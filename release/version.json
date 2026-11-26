@@ -1,7 +1,7 @@
 {
-  "versionCode": 69,
-  "versionName": "3.6.9",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.9/v3.6.9.apk",
-  "changelog": "3 animasi lirik baru: Kartun Zoom, Neon Kelip dan Cecair. Galeri wallpaper baru. Wallpaper kekal bila tukar layout. Kad lirik besar dan Home lebih ringan.",
-  "sha256": "9b8af6f732a93295a67847c1220f6791143e89f5fe93ef92dab80bcb8d95c1e0"
+  "versionCode": 70,
+  "versionName": "3.7.0",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.7.0/v3.7.0.apk",
+  "changelog": "Pratonton layout sebelum OK. Kad lirik besar terus buka pada baris semasa dengan latar gelap penuh dan jimat memori. 3 animasi lirik baru, galeri wallpaper, app lebih ringan.",
+  "sha256": "af8a4abd3e6cda7029a697691760aa8a68c0f5fcae8c7d98252812d76c1bc17a"
 }
