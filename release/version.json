@@ -1,7 +1,7 @@
 {
-  "versionCode": 66,
-  "versionName": "3.6.6",
-  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.6/v3.6.6.apk",
-  "changelog": "Pembaikan: navigasi D-pad dalam Preferences di semua tab, butang Atas dalam drawer Pill kembali ke dock, widget tidak lagi lari atau mengecil bila buka drawer atau tukar layout.",
-  "sha256": "1a9d2bb47a661cde999c3bfec07c96ef11c73741e304b8f8a83b894e34b0762f"
+  "versionCode": 67,
+  "versionName": "3.6.7",
+  "apkUrl": "https://github.com/chombeee/tv-g/releases/download/v3.6.7/v3.6.7.apk",
+  "changelog": "Lirik lebih tepat masa. Drawer Pill jadi satu halaman bersambung dengan latar kabur bergradient. Layout Home: kiri/kanan untuk pilih, OK untuk guna.",
+  "sha256": "2218898e2ad261c0becc737f710e52a3d2a5047dd7bdf25090dc191db5fe9f44"
 }
